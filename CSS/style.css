@@ -1,7 +1,7 @@
 * {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;    }
+   box-sizing: border-box;   }
 html {
    font-family: sans-serif;
    font-size: 62.5%;   }
@@ -9,67 +9,68 @@ html {
    html {
       font-size: 43.75%;
    }   }
-/*-----------------*/
+/*---------------*/
 .slide {
    width: 50rem;
-   height: 80rem;
-   border: 2px solid darkgoldenrod ;
-   margin: 1vh auto;   }
+   height: 70rem;
+   display: flex;
+   flex-direction: column;
+   margin: 1vh auto;
+   border: 2px solid darkgoldenrod;    }
 .slide h1 {
-   font-size: 4rem;
+   line-height: 7rem;
    text-align: center;
-   line-height: 10rem;
+   font-size: 4rem;
    color: darkgoldenrod;   }
 .slide .imgs {
    width: 100%;
-   height: 60rem;
+   height: 55rem;
    position: relative;   }
 .slide .imgs img {
+   width: 100%;
+   height: 100%;
    position: absolute;
    top: 0;
    left: 0;
-   width: 100%;
-   height: 100%;
-   opacity: 0;
-   transition: 0.4s;   }
+   opacity: 0;   }
 .slide .imgs img.active {
    opacity: 1;   }
 .slide .control {
+   height: 8rem;
    width: 100%;
-   height: 10rem;
+   padding: 1rem;
    display: flex;
    justify-content: space-between;
-   align-items: center;
-   padding: 1rem;   }
-.slide .control button {
+   align-items: center;   }
+.slide button {
    font-size: 2rem;
    color: white;
    background-color: rgba(184, 135, 11, 0.8);
-   padding: 1rem 2rem;
-   border-radius: 1rem;
    cursor: pointer;
+   border-radius: 1rem;
    transition: 0.4s;
+   padding: 1rem 2rem;
    border: none;   }
-.slide .control button:hover {
-   background-color: darkgoldenrod;   } 
-.slide .control ul {
-   display: flex;
+.slide button:hover {
+   background-color: darkgoldenrod;   }
+.slide ul {
    list-style: none;
-   gap: 0.5rem;   }
-.slide .control ul li {
-   transition: 0.4s;
-   opacity: 0.5;
+   display: flex;
+   gap: 0.5rem ;   }
+.slide ul li {
+   font-size: 2rem ;
    width: 3rem;
    height: 3rem;
-   cursor: pointer;
-   background-color: darkgoldenrod;
-   font-size: 2rem;
-   border-radius: 50%;
-   color: white;
    display: flex;
    justify-content: center;
-   align-items: center;   }
-.slide .control ul li.active {
-   opacity: 1;   }
-
+   align-items: center;
+   color: white;
+   background-color: darkgoldenrod;
+   border-radius: 50%;
+   opacity: 0.5;
+   transition: 0.4s; 
+   cursor: pointer;   }
+.slide ul li:hover ,
+.slide ul li.active {
+   opacity: 1;    }
 
